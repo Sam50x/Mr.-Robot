@@ -1,0 +1,93 @@
+:root{
+    --header-color: white;
+    --header-second-color: red;
+    --header-font-size: 42px;
+    --header-second-font-size: calc(var(--header-font-size) + 40px);
+    --header-font: rubik;
+    --header-shadow: drop-shadow(5px 5px 0.1rem black);
+}
+
+html, body{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./Assets/city.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    font-family: var(--header-font);
+    border-bottom: 8px solid black;
+}
+
+#header h2{
+    font-size: var(--header-font-size);
+    color: var(--header-color);
+    display: inline-block;
+    padding: 20px;
+    margin: 10px;
+    filter: var(--header-shadow);
+}
+
+#name{
+    color: var(--header-second-color);
+    font-size: var(--header-second-font-size)
+}
+
+#not-Elliot, #Elliot{
+    padding: 0 0 20px;
+    border-bottom: 4px solid black;
+}
+
+#not-Elliot h2, #Elliot h2, #me h2{
+    font-size: var(--header-font-size);
+    font-family: var(--header-font);
+    filter: var(--header-shadow);
+}
+
+#name-char{
+    font-size: calc(var(--header-second-font-size));
+    color: var(--header-second-color)
+}
+
+@media (max-width: 450px){
+    #not-Elliote h2, #Elliote h2, #me h2{
+        padding: 0 0 0 5px;
+        font-size: calc(var(--header-font-size) - 10px);
+        font-family: var(--header-font);
+        filter: var(--header-shadow);
+    }
+    #name-char{
+        font-size: calc(var(--header-font-size) + 15px);
+        color: var(--header-second-color)
+    }
+    
+}
+
+#me{
+    padding: 0 0 20px;
+}
+
+#footer{
+    width: 100%;
+    padding: 25px 15px;
+}
+
+.hack{
+    font-family: var(--header-font);
+    color: black;
+    transition: all 5s ease-out 2s;
+}
+
+.hack:hover{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
